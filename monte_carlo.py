@@ -10,7 +10,7 @@ def calc_delta(vd_price, s0, **kwargs):
         return np.nan
     vh = calc_payoff(vd_price=vd_price * 1.005, s0=s0, **kwargs)
     vl = calc_payoff(vd_price=vd_price * 0.995, s0=s0, **kwargs)
-    delta = (vh - vl) / (0.02 * vd_price)
+    delta = (vh - vl) / (0.01 * vd_price)
     print(datetime.now() - _s, s0, delta)
     return delta
 
